@@ -1,3 +1,5 @@
 @use "@/app/styles/variables" as *;
 .container {
+  max-width: 71rem;
+  margin: auto;
 }

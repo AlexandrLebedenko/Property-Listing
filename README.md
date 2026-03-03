@@ -1,4 +1,4 @@
-# **<p style="text-align:center">Simple Coffee Listing</p>**
+# **<p style="text-align:center">Property Listing</p>**
 
 ## Table of contents
 

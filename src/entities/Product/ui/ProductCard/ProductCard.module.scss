@@ -1,12 +1,11 @@
 @use "@/app/styles/variables" as *;
 .card {
   position: relative;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 .cardImage {
   object-fit: contain;
-  border-radius: 1rem;
-  margin-bottom: 0.625rem;
 }
 .superhost {
   @include text-format(small-text);
@@ -19,31 +18,38 @@
 }
 .cardDescription {
   padding: 1.25rem;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: $color-light-gray;
+  border-radius: 0 0 0.75rem 0.75rem;
 }
 .cardHeading {
   margin-bottom: 0.5rem;
   &::after {
     content: "";
-    border: 1px solid $color-light-gray;
+    display: block;
+    border-top: 1px solid $color-light-gray;
     max-width: 100%;
     margin: 1rem 0;
   }
 }
 .cardTitle {
-  @include text-format(body-text);
+  @include text-format(card-title-text);
   margin-bottom: 0.5rem;
 }
 .cardText {
   @include text-format(body-text);
+  color: #d2d5da;
   margin-bottom: 1rem;
 }
 .capacity {
-  @include text-format(sublabel-text);
+  @include text-format(label-text);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
   &__item {
+    color: #d2d5da;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -61,12 +67,15 @@
   gap: 0.25rem;
 }
 .cardPrice {
-  @include text-format(price-text);
-  padding: 0.25rem 0.5rem;
+  @include text-format(body-text);
+  color: #d2d5da;
   border-radius: 0.25rem;
   span {
+    @include text-format(price-text);
   }
 }
 .cardRating {
-  @include text-format(price-text);
+  @include text-format(body-text);
+  display: flex;
+  align-items: center;
 }

@@ -22,27 +22,27 @@ $text-styles: (
   price-text: (
     font-size: 1.25rem,
     font-weight: 500,
-    color: $color-black,
+    color: $color-white,
   ),
-  body-text: (
+  card-title-text: (
     font-size: 1rem,
     font-weight: 700,
-    color: $color-gray,
+    color: $color-white,
   ),
-  label-text: (
+  body-text: (
     font-size: 0.875rem,
     font-weight: 400,
     color: $color-white,
   ),
-  sublabel-text: (
+  label-text: (
     font-size: 0.75rem,
-    font-weight: 500,
-    color: $color-black,
+    font-weight: 400,
+    color: $color-white,
   ),
   small-text: (
     font-size: 0.625rem,
     font-weight: 700,
-    color: $color-black,
+    color: $color-white,
   ),
 );
 

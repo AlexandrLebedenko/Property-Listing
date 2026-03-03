@@ -11,3 +11,12 @@ export async function fetchAllProducts() {
     return [];
   }
 }
+export async function fetchAvailableProducts() {
+  try {
+    const allProducts = await fetchAllProducts();
+    return allProducts.filter((product) => product.available === true);
+  } catch (error) {
+    console.error("fetchAvailableProducts error:", error);
+    return [];
+  }
+}
