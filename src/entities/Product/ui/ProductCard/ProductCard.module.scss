@@ -1,0 +1,72 @@
+@use "@/app/styles/variables" as *;
+.card {
+  position: relative;
+  border-radius: 0.5rem;
+}
+.cardImage {
+  object-fit: contain;
+  border-radius: 1rem;
+  margin-bottom: 0.625rem;
+}
+.superhost {
+  @include text-format(small-text);
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: $color-light-black;
+  border-radius: 0.75rem;
+}
+.cardDescription {
+  padding: 1.25rem;
+}
+.cardHeading {
+  margin-bottom: 0.5rem;
+  &::after {
+    content: "";
+    border: 1px solid $color-light-gray;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+.cardTitle {
+  @include text-format(body-text);
+  margin-bottom: 0.5rem;
+}
+.cardText {
+  @include text-format(body-text);
+  margin-bottom: 1rem;
+}
+.capacity {
+  @include text-format(sublabel-text);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: center;
+  }
+}
+.cardPriceRow {
+  @include text-format(label-text);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+.cardPrice {
+  @include text-format(price-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  span {
+  }
+}
+.cardRating {
+  @include text-format(price-text);
+}

@@ -1,0 +1,10 @@
+@use "@/app/styles/variables" as *;
+.wrapper {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: $color-black;
+  background-image: url("../../assets/backgrounds/hero-image.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  //   padding: 10rem 2.5rem;
+}

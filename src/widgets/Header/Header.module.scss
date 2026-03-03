@@ -1,0 +1,11 @@
+@use "@/app/styles/variables" as *;
+.header {
+  padding: 11.25rem 8.75rem;
+}
+.title {
+  @include text-format(heading-text);
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  @include text-format(subheading-text);
+}
