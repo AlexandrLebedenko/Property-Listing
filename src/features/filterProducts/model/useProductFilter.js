@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchAllProducts, fetchAvailableProducts } from "@/entities/Product/model/api.js";
+import { fetchAllProducts, fetchAvailableProducts } from "@/entities/Stay/model/api.js";
 
 export function useProductFilter() {
   const [activeTab, setActiveTab] = useState("all");

@@ -1,12 +1,12 @@
-import styles from "./ProductGrid.module.scss";
-import ProductCard from "@/entities/Product/ui/ProductCard/ProductCard";
-function ProductGrid({ products }) {
+import styles from "./StaysGrid.module.scss";
+import StayCard from "@/entities/Stay/ui/StayCard/StayCard";
+function StaysGrid({ products }) {
   return (
     <main className={styles.productsBox}>
       <p className={styles.productsBox__lable}>Over 200 stays</p>
       <div className={styles.productsGrid}>
         {products.map((product) => (
-          <ProductCard
+          <StayCard
             key={product.id}
             title={product.title}
             description={product.description}
@@ -15,10 +15,10 @@ function ProductGrid({ products }) {
             superhost={product.superhost}
             capacity={product.capacity}
             image={product.image}
-          ></ProductCard>
+          ></StayCard>
         ))}
       </div>
     </main>
   );
 }
-export default ProductGrid;
+export default StaysGrid;

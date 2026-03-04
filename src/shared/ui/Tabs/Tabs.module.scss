@@ -1,0 +1,15 @@
+@use "@/app/styles/variables" as *;
+.tabsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.tabs {
+  @include text-format(body-text);
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  background-color: $color-gray;
+  border-radius: 0.5rem;
+}

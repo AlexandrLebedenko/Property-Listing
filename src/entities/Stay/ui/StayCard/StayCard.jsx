@@ -1,8 +1,8 @@
-import styles from "./ProductCard.module.scss";
+import styles from "./StayCard.module.scss";
 import homeIcon from "@/assets/icons/Home_duotone.svg";
 import humanIcon from "@/assets/icons/User_alt_duotone.svg";
 import starIcon from "@/assets/icons/Starfill.svg";
-function ProductCard({ title, description, price, capacity, rating, superhost, image }) {
+function StayCard({ title, description, price, capacity, rating, superhost, image }) {
   return (
     <div className={styles.card}>
       <img className={styles.cardImage} src={image} alt={title} />
@@ -35,4 +35,4 @@ function ProductCard({ title, description, price, capacity, rating, superhost, i
     </div>
   );
 }
-export default ProductCard;
+export default StayCard;
