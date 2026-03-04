@@ -1,0 +1,13 @@
+@use "@/app/styles/variables" as *;
+.checkboxBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.checkbox {
+}
+.checkboxLabel {
+  @include text-format(label-text);
+}
