@@ -3,14 +3,18 @@ import Header from "@/widgets/Header/Header";
 import styles from "./MainPage.module.scss";
 import StaysGrid from "@/widgets/StaysGrid/ui/StaysGrid";
 import StaysFilter from "@/widgets/StaysFilter/ui/StaysFilter";
-import { useProductFilter } from "@/features/filterProducts/model/useProductFilter";
+import { useCountryFilter } from "@/features/filterByCountry/model/useCountryFilter";
+import { useSuperhostFilter } from "@/features/filterBySuperhost/model/useSuperhostFilter";
+import { useCapacityFilter } from "@/features/filterByCapacity/model/useCapacityFilter";
 function MainPage() {
-  const { products } = useProductFilter();
+  const countryFilter = useCountryFilter();
+  const superhostFilter = useSuperhostFilter();
+  const capacityFilter = useCapacityFilter();
   return (
     <div className={styles.wrapper}>
       <Header></Header>
       <Container>
-        <StaysFilter></StaysFilter>
+        <StaysFilter {...countryFilter} {...superhostFilter} {...capacityFilter}></StaysFilter>
         <StaysGrid products={products}></StaysGrid>
       </Container>
     </div>

@@ -1,5 +1,18 @@
 @use "@/app/styles/variables" as *;
 .navigation {
   padding: 2rem 2.5rem;
+  margin-bottom: 3rem;
   border-radius: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.rightSide {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
 }
