@@ -3,7 +3,7 @@ import StayCard from "@/entities/Stay/ui/StayCard/StayCard";
 function StaysGrid({ products }) {
   return (
     <main className={styles.productsBox}>
-      <p className={styles.productsBox__lable}>Over 200 stays</p>
+      <p className={styles.productsBox__label}>Over 200 stays</p>
       <div className={styles.productsGrid}>
         {products.map((product) => (
           <StayCard

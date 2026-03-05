@@ -1,6 +1,6 @@
 @use "@/app/styles/variables" as *;
 .productsBox {
-  &__lable {
+  &__label {
     @include text-format(subheading-text);
     color: $color-white;
     font-weight: 600;
