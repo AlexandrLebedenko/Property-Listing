@@ -2,9 +2,9 @@ import styles from "./StaysFilter.module.scss";
 import CountryTabs from "@/features/filterByCountry/ui/CountryTabs";
 import SuperhostCheckbox from "@/features/filterBySuperhost/ui/SuperhostCheckbox";
 import CapacityDropdown from "@/features/filterByCapacity/ui/CapacityDropdown";
-function StaysFilter({ selectedCountry, onCountryChange, countries }) {
+function StaysFilter({}) {
   return (
-    <nav className={navigation}>
+    <nav className={styles.navigation}>
       <CountryTabs></CountryTabs>
       <div className={styles.rightSide}>
         <SuperhostCheckbox></SuperhostCheckbox>

@@ -1,5 +1,5 @@
 import Dropdown from "@/shared/ui/Dropdown/Dropdown";
-function CapacityDropdown(params) {
+function CapacityDropdown({}) {
   return <Dropdown></Dropdown>;
 }
 export default CapacityDropdown;
