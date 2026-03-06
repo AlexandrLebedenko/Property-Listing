@@ -14,8 +14,8 @@ function MainPage() {
     <div className={styles.wrapper}>
       <Header></Header>
       <Container>
-        <StaysFilter {...countryFilter} {...superhostFilter} {...capacityFilter}></StaysFilter>
-        <StaysGrid products={products}></StaysGrid>
+        <StaysFilter {...countryFilter}></StaysFilter>
+        <StaysGrid stays={countryFilter.filteredStays}></StaysGrid>
       </Container>
     </div>
   );

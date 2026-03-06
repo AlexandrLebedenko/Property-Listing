@@ -1,10 +1,14 @@
 import styles from "./Tabs.module.scss";
-function Tabs({ activeTab, onTabChange }) {
+function Tabs({ selectedLocation, onLocationChange, locations }) {
   return (
     <div className={styles.tabsContainer}>
-      {items.map((item) => (
-        <button className={`${styles.tab} ${activeTab === item.value ? styles.active : ""}`} onClick={() => onTabChange(item.value)}>
-          {location}
+      {locations.map((location) => (
+        <button
+          key={location.value}
+          className={`${styles.tab} ${selectedLocation === location.value ? styles.active : ""}`}
+          onClick={() => onLocationChange(location.value)}
+        >
+          {location.label}
         </button>
       ))}
     </div>
