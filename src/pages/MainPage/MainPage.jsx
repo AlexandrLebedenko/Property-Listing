@@ -8,13 +8,13 @@ import { useSuperhostFilter } from "@/features/filterBySuperhost/model/useSuperh
 import { useCapacityFilter } from "@/features/filterByCapacity/model/useCapacityFilter";
 function MainPage() {
   const countryFilter = useCountryFilter();
-  const superhostFilter = useSuperhostFilter();
-  const capacityFilter = useCapacityFilter();
+  const superhostFilter = useSuperhostFilter(countryFilter.allStays);
+  const capacityFilter = useCapacityFilter(countryFilter.allStays);
   return (
     <div className={styles.wrapper}>
       <Header></Header>
       <Container>
-        <StaysFilter {...countryFilter}></StaysFilter>
+        <StaysFilter {...countryFilter} {...superhostFilter} {...capacityFilter}></StaysFilter>
         <StaysGrid stays={countryFilter.filteredStays}></StaysGrid>
       </Container>
     </div>
