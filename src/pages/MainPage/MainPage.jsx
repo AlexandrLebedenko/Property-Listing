@@ -10,12 +10,15 @@ function MainPage() {
   const countryFilter = useCountryFilter();
   const superhostFilter = useSuperhostFilter(countryFilter.allStays);
   const capacityFilter = useCapacityFilter(countryFilter.allStays);
+  const filteredStays = countryFilter.filteredStays
+    .filter((stay) => (superhostFilter.superhostOnly ? stay.superhost : true))
+    .filter((stay) => stay.capacity.bedroom >= capacityFilter.minBedrooms);
   return (
     <div className={styles.wrapper}>
       <Header></Header>
       <Container>
         <StaysFilter {...countryFilter} {...superhostFilter} {...capacityFilter}></StaysFilter>
-        <StaysGrid stays={countryFilter.filteredStays}></StaysGrid>
+        <StaysGrid stays={filteredStays}></StaysGrid>
       </Container>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-export function useSuperhostFilter(allStays = []) {
+export function useSuperhostFilter(allStays) {
   const [superhostOnly, setSuperhostOnly] = useState(false);
   const filteredBySuperhost = useMemo(() => {
     if (!superhostOnly) return allStays;
