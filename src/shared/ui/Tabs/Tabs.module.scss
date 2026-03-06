@@ -8,8 +8,10 @@
 }
 .tabs {
   @include text-format(body-text);
-  font-weight: 700;
+  font-weight: 600;
   padding: 0.5rem 0.75rem;
-  background-color: $color-gray;
   border-radius: 0.5rem;
+  &--active {
+    background-color: $color-gray;
+  }
 }
