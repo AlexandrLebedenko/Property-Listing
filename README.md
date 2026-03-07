@@ -9,11 +9,11 @@
 
 ## <a id="general-info">⭐ General info</a>
 
-Discover a selection of unique coffees with different roast types and origins. Filter available drinks and find your perfect cup.
+Is an interactive catalog for finding your ideal nature getaway. This project is a React-based SPA (Single Page Application) that allows you to easily filter and browse through a selection of Nordic-style cabins and homes.
 
 ## <a id="Illustrations">🖼️ Preview</a>
 
-<a style="font-size: 24px">https://alexandrlebedenko.github.io/Simple-Coffee-Listing/</a>
+<a style="font-size: 24px">https://alexandrlebedenko.github.io/Property-Listing/</a>
 
 ## <a id="notice">🧾 Notice</a>
 
