@@ -1,6 +1,6 @@
 @use "@/app/styles/variables" as *;
 .header {
-  padding: 11.25rem 8.75rem;
+  padding: 0 8.75rem 11.25rem 8.75rem;
 }
 .title {
   @include text-format(heading-text);
@@ -8,4 +8,31 @@
 }
 .subtitle {
   @include text-format(subheading-text);
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 calc(8.75rem / 1.25) calc(11.25rem / 1.25) calc(8.75rem / 1.25);
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 780px) {
+  .header {
+    padding: 0 calc(8.75rem / 2) calc(11.25rem / 2) calc(8.75rem / 2);
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 540px) {
+  .header {
+    padding: 0 calc(8.75rem / 6) calc(11.25rem / 6) calc(8.75rem / 6);
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
 }

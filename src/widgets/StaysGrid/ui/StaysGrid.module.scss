@@ -14,3 +14,20 @@
   column-gap: 2rem;
   row-gap: 4.5rem;
 }
+@media (min-width: 781px) and (max-width: 1025px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    max-width: fit-content;
+    margin: auto;
+  }
+}
+@media (max-width: 780px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: fit-content;
+    margin: auto;
+    row-gap: 2rem;
+  }
+}

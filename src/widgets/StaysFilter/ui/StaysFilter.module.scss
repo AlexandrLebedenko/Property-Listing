@@ -18,3 +18,25 @@
   align-items: center;
   gap: 1.25rem;
 }
+@media (min-width: 781px) and (max-width: 1025px) {
+  .navigation {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 780px) {
+  .navigation {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 540px) {
+  .rightSide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+}
