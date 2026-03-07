@@ -6,6 +6,7 @@
   font-weight: 700;
   border: 2px solid $color-gray;
   border-radius: 0.75rem;
+  width: 181px;
 }
 .dropdownHeader {
   cursor: pointer;
@@ -38,6 +39,8 @@
   &.selected {
     text-decoration: underline;
     text-decoration-color: $color-gray;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
   }
   &:last-child {
     margin-bottom: 0.325rem;

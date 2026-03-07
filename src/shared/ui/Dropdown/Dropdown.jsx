@@ -1,19 +1,21 @@
 import { useState } from "react";
 import styles from "./Dropdown.module.scss";
 import arrowIcon from "@/assets/icons/Expand_down.svg";
-function Dropdown({ value, onChange, options }) {
+
+function Dropdown({ value, onChange, options, isActive }) {
   const [isOpen, setIsOpen] = useState(false);
-  // Находим выбранный элемент для отображения
+
   const selectedOption = options.find((opt) => opt.value === value);
+
+  const displayText = !isActive ? "Property type" : selectedOption?.label || "Property type";
 
   return (
     <div className={styles.dropdown}>
-      {/* Заголовок (всегда виден) */}
       <div className={styles.dropdownHeader} onClick={() => setIsOpen(!isOpen)}>
-        <span>{selectedOption?.label || "Property type"}</span>
+        <span>{displayText}</span>
         <img className={`${styles.arrow} ${isOpen ? styles.open : ""}`} src={arrowIcon} alt="arrow icon" />
       </div>
-      {/* Dropdown list */}
+
       {isOpen && (
         <ul className={styles.dropdownList} role="listbox">
           {options.map((option) => (
@@ -34,4 +36,5 @@ function Dropdown({ value, onChange, options }) {
     </div>
   );
 }
+
 export default Dropdown;

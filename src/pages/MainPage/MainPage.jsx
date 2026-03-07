@@ -12,7 +12,12 @@ function MainPage() {
   const capacityFilter = useCapacityFilter(countryFilter.allStays);
   const filteredStays = countryFilter.filteredStays
     .filter((stay) => (superhostFilter.showAll ? true : !stay.superhost))
-    .filter((stay) => stay.capacity.bedroom >= capacityFilter.minBedrooms);
+    .filter((stay) => {
+      if (!capacityFilter.isActive || capacityFilter.minBedrooms === null) {
+        return true;
+      }
+      return stay.capacity.bedroom === capacityFilter.minBedrooms;
+    });
   return (
     <div className={styles.wrapper}>
       <Header></Header>
