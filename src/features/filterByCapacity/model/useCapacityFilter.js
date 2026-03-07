@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 export function useCapacityFilter(allStays) {
-  const [minBedrooms, setMinBedrooms] = useState(1);
+  const [minBedrooms, setMinBedrooms] = useState([]);
   const maxBedrooms = useMemo(() => {
     return Math.max(...allStays.map((stay) => stay.capacity.bedroom));
   }, [allStays]);

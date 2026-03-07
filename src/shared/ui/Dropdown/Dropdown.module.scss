@@ -1,1 +1,45 @@
 @use "@/app/styles/variables" as *;
+.dropdown {
+  @include text-format(body-text);
+  position: relative;
+  background-color: inherit;
+  font-weight: 700;
+  border: 2px solid $color-gray;
+  border-radius: 0.75rem;
+}
+.dropdownHeader {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+.arrow {
+  transition: transform 0.3s;
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+.dropdownList {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: $color-light-black;
+  border: 2px solid $color-gray;
+  border-radius: 0.75rem;
+  z-index: 2;
+  padding: 0.75rem 1.5rem;
+}
+.dropdownItem {
+  cursor: pointer;
+  margin: 0.75rem 0 1.5rem 0;
+  &.selected {
+    text-decoration: underline;
+    text-decoration-color: $color-gray;
+  }
+  &:last-child {
+    margin-bottom: 0.325rem;
+  }
+}
