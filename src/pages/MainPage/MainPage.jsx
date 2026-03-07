@@ -11,7 +11,7 @@ function MainPage() {
   const superhostFilter = useSuperhostFilter(countryFilter.allStays);
   const capacityFilter = useCapacityFilter(countryFilter.allStays);
   const filteredStays = countryFilter.filteredStays
-    .filter((stay) => (superhostFilter.superhostOnly ? stay.superhost : true))
+    .filter((stay) => (superhostFilter.showAll ? true : !stay.superhost))
     .filter((stay) => stay.capacity.bedroom >= capacityFilter.minBedrooms);
   return (
     <div className={styles.wrapper}>

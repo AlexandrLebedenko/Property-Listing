@@ -2,7 +2,7 @@ import styles from "./Checkbox.module.scss";
 function Checkbox({ checked, onChange }) {
   return (
     <div className={styles.checkboxBox}>
-      <label>
+      <label className={styles.togglerWrapper}>
         <input
           type="checkbox"
           checked={checked}
@@ -11,6 +11,9 @@ function Checkbox({ checked, onChange }) {
           name="superhost filter"
           id="superhost"
         />
+        <div className={styles.togglerSlider}>
+          <span className={styles.togglerKnob}></span>
+        </div>
       </label>
 
       <span className={styles.checkboxLabel}>Superhost</span>
